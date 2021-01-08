@@ -38,7 +38,7 @@
 }
 	
 @mixin rem($size){
-	font-size: ($size/16)*1rem;
+	font-size: ($size/18)*1rem;
 }
 
 @mixin size($width, $height...){

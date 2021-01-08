@@ -33,6 +33,7 @@
     "gulp-ttf2woff2": "^3.0.0"
   },
   "dependencies": {
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "svg4everybody": "^2.1.9"
   }
 }

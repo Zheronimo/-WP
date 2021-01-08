@@ -1,8 +1,12 @@
-$(document).ready(function() {
+// $(document).ready(function() {
+	
+
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
 	svg4everybody({});
 
 });
-
 
 //Полифил для IE11
 (function () {
