@@ -1,0 +1,97 @@
+@import 'libs/libs';
+@import 'layout/mixin/mixins';
+@import 'layout/mixin/font-face';
+@import 'layout/fonts';
+@import 'layout/vars';
+
+
+html {
+	font-size: $baseFontSize;
+	height: 100%;
+	&.fixed {
+		overflow: hidden;
+		body {
+			overflow: hidden;
+		}
+	}
+}
+body {
+	font-family: $mainFont;
+	height: 100%;
+	overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+
+ul,li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+p {
+	margin: 0;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+textarea {
+	resize: none;
+}
+
+section {
+	position: relative;
+}
+
+input,
+select,
+button {
+	outline: none;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.container {
+	width: 100%;
+	max-width: $contentSize;
+	margin: 0 auto;
+	padding: 0 15px;
+	position: relative;
+}
+
+
+
+// Модули
+@import "modules/modules";
