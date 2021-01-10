@@ -5,14 +5,16 @@ $aсcent-color: #5D71DD;
 $dark-color: #2F2222;
 
 
-$main-bg: #E5E5E5;
+$main-bg: #f9f9f9;
+$footer-bg: rgba(93, 113, 221, 0.05);
 
 
 // РАЗМЕРЫ
 $baseFontSize: 18px;
 $contentSize: 1430px; 
+$grid-gap: 40px;
 
 
 // ШРИФТЫ
-$mainFont: "FuturaPTBook", Arial, sans-serif;
-$mediumFont: "FuturaPTMedium", Arial, sans-serif;
+$mainFont: "FuturaPT", Arial, sans-serif;
+// $mediumFont: "FuturaPTMedium", Arial, sans-serif;

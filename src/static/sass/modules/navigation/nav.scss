@@ -1,0 +1,24 @@
+.nav {
+	&__list {
+		display: flex;
+		& > * {
+		&:not(:last-child) { margin-right: $grid-gap; }
+		}
+		color: $dark-color
+	}
+	&__link {
+		&--current {
+			position: relative;
+			color: $aсcent-color;
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: $aсcent-color;
+			}
+		}
+	}
+}

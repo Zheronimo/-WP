@@ -1,0 +1,18 @@
+.header {
+	padding: 8px 0 6px 0;
+	background-color: #fff;
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		transform: translateY(3px);
+	}
+	&-right {
+		display: flex;
+		& > * {
+		&:not(:last-child) { margin-right: $grid-gap; }
+		}
+	}
+}

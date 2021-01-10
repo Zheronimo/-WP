@@ -19,6 +19,9 @@ body {
 	font-family: $mainFont;
 	height: 100%;
 	overflow-x: hidden;
+	margin: 0;
+	color: $text-color;
+	background-color: $main-bg;
 }
 h1,h2,h3,h4,h5,h6 {
 	margin: 0;
@@ -44,6 +47,9 @@ img,
 svg,
 video {
 	vertical-align: middle;
+}
+img {
+	max-width: 100%;
 }
 
 textarea {
