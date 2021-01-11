@@ -15,6 +15,9 @@
 		border: none;
 		border-radius: 20px;
 		background-color: #f5f5f5;
+		&:focus {
+			box-shadow: 0px 0px 0px 2px #5D71DD;
+		}
 	}
 	&__btn {
 		display: flex;
@@ -29,6 +32,13 @@
 		border-radius: 20px;
 		background-color: $aсcent-color;
 		cursor: pointer;
+		@include shift();
+		&:focus {
+			box-shadow: 0px 0px 0px 2px #2F2222;
+		}
+		&:hover {
+			background-color: #6C7DD8;
+		}
 		& > * {
 		&:not(:last-child) { margin-right: 19px; }
 		}

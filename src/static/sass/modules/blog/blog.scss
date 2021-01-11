@@ -13,6 +13,13 @@
 		height: 100%;
 		border-radius: 20px;
 		background-color: #fff;
+		@include shift();
+		&:hover {
+			box-shadow: 4px 8px 40px rgba(8, 24, 111, 0.2);
+		}
+		&:focus {
+			box-shadow: 0px 0px 0px 2px #5D71DD;
+		}
 		&--main {
 			margin-bottom: $grid-gap;
 			height: 280px;
@@ -28,10 +35,17 @@
 			border-radius: 8px;
 			background-color: #F7F8FD;
 			z-index: 5;
+			@include shift();
+			&:hover {
+				background: rgba(93, 113, 221, 0.15);
+			}
 		}
 		&__link::before {
 			content: '';
 			@include coverdiv();
+			&:hover {
+				box-shadow: 4px 8px 40px rgba(8, 24, 111, 0.2);
+			}
 		}
 		&__descr {
 			max-width: 880px;

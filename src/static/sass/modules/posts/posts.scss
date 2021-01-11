@@ -19,12 +19,30 @@
 				padding: $grid-gap 30px;
 				color: #fff;
 				background-color: $aсcent-color;
+				&:hover {
+					background-color: #fff;
+					& .blog-post__category {
+						color: $aсcent-color;
+						background-color: rgba(93, 113, 221, 0.05);
+					}
+					& .blog-post__title {
+						color: $dark-color;
+					}
+					& .blog-post__date {
+						color: $text-color;
+					}
+				}
 				&__category {
 					color: #fff;
-					background: #7D8DE4;
+					background-color: #7D8DE4;
+					@include shift();
+					&:hover {
+						background-color: rgba(93, 113, 221, 0.15);
+					}
 				}
 				&__title {
 					color: #fff;
+					@include shift();
 				}
 				&__date {
 					top: initial;

@@ -7,6 +7,10 @@
 		color: $dark-color
 	}
 	&__link {
+		@include shift();
+		&:hover {
+			color: $aсcent-color;
+		}
 		&--current {
 			position: relative;
 			color: $aсcent-color;
