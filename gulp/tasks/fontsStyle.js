@@ -13,6 +13,9 @@ module.exports = function(){
 			for (var i = 0; i < items.length; i++) {
 				let fontname = items[i].split('.');
 				fontname = fontname[0];
+
+				let name = items[i].split('-');
+				name = name[0];
 				
 				let fontweight;
 				let str = fontname.toLowerCase();
@@ -49,7 +52,7 @@ module.exports = function(){
 				};
 				
 				if (c_fontname != fontname) {
-					$.fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", '+ fontweight +', "' +  fontstyle + '");\r\n', cb);
+					$.fs.appendFile(srcFonts, '@include font-face("' + name + '", "' + fontname + '", '+ fontweight +', "' +  fontstyle + '");\r\n', cb);
 				}
 				c_fontname = fontname;
 			}
