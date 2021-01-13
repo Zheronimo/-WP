@@ -13,6 +13,7 @@
 		height: 100%;
 		border-radius: 20px;
 		background-color: #fff;
+		cursor: pointer;
 		@include shift();
 		&:hover {
 			box-shadow: 4px 8px 40px rgba(8, 24, 111, 0.2);

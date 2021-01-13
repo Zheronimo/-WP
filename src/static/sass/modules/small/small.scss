@@ -15,7 +15,19 @@
   height: 300px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+	background-size: cover;
+	&-category {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.banner-category__title {
+	padding: 71px 0;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 38px;
+	color: $aсcent-color;
 }
 .banner-post {
   padding: $grid-gap 0;
