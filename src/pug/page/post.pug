@@ -1,0 +1,10 @@
+extends ../main-layout
+
+block variables
+	- var title = 'Пост'
+	- var pageClass = 'post-page'
+
+block content
+	main.main.main--post
+		include ../modules/banner/post-banner
+		include ../modules/content/post-content
