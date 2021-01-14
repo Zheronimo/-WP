@@ -1,0 +1,39 @@
+.contacts {
+	padding-top: 140px;
+	padding-bottom: 132px;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__left {
+		padding-top: 44px;
+		padding-left: 120px;
+		width: calc(50% - 20px);
+	}
+	&__right {
+		width: calc(50% - 20px);
+	}
+	&-form__wrapper {
+		padding: 44px 60px 60px;
+		max-width: 560px;
+		background-color: #fff;
+		border-radius: 20px;
+	}
+	&__title {
+		margin-bottom: 35px;
+		font-size: 30px;
+	}
+	&__phone {
+		display: inline-block;
+		font-weight: 400;
+		margin-bottom: 22px;
+	}
+	&__address {
+		margin-bottom: 42px;
+	}
+}
+.callback-form {
+	& > * {
+	&:not(:last-child) { margin-bottom: 20px; }
+	}
+}

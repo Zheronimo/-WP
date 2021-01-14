@@ -11,6 +11,15 @@
   background-repeat: no-repeat;
   background-position: left center;
 }
+.address {
+	padding-left: 24px;
+	font-weight: 400;
+	font-style: normal;
+  color: $aсcent-color;
+  background-image: url("../img/svg/marker.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
 .s-banner {
   height: 300px;
   background-repeat: no-repeat;
@@ -61,4 +70,30 @@
 }
 .subscribe__title {
   margin-bottom: 30px;
+}
+.social {
+	display: flex;
+	& > * {
+	&:not(:last-child) { margin-right: 20px; }
+	}
+	&__link {
+		display: block;
+		@include size(40px);
+		border-radius: 50%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		&--fb {
+			background-image: url('../img/svg/fb.svg');
+		}
+		&--vk {
+			background-image: url('../img/svg/vk.svg');
+		}
+		&--insta {
+			background-image: url('../img/svg/insta.svg');
+		}
+		&--tw {
+			background-image: url('../img/svg/tw.svg');
+		}
+	}
 }
