@@ -1,0 +1,10 @@
+extends ../main-layout
+
+block variables
+	- var title = 'Страница поиска'
+	- var pageClass = 'search-page'
+
+block content
+	include ../modules/header/header
+	main.main
+		include ../modules/content/search-content

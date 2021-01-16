@@ -1,4 +1,5 @@
 .header {
+	position: relative;
 	padding: 8px 0 6px 0;
 	background-color: #fff;
 	&__container {
@@ -13,6 +14,54 @@
 		display: flex;
 		& > * {
 		&:not(:last-child) { margin-right: $grid-gap; }
+		}
+	}
+	&-search {
+		position: absolute;
+		top: calc(100% + 80px);
+		left: 50%;
+		display: none;
+		padding: 25px 40px;
+		width: 1040px;
+		border-radius: 20px;
+		background-color: #fff;
+		z-index: 10;
+		transform: translateX(-50%);
+		&__form {
+			display: flex;
+			align-items: center;
+			& > * {
+			&:not(:last-child) { margin-right: 20px; }
+			}
+		}
+		&__btn {
+			max-width: 200px;
+		}
+	}
+	&__close {
+		display: none;
+		& > * {
+		&:not(:last-child) { margin-right: 8px; }
+		}
+		cursor: pointer;
+		&:hover {
+			& span {
+				color: $aсcent-color;
+			}
+			& svg {
+				fill: $aсcent-color;
+			}
+		}
+		& span {
+			font-size: 18px;
+			line-height: 23px;
+			color: $dark-color;
+			@include shift();
+		}
+		& svg {
+			@include size(10px);
+			fill: $dark-color;
+			@include shift();
 		}
 	}
 }

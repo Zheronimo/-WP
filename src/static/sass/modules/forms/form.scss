@@ -6,15 +6,19 @@
 		height: 50px;
 		font-family: $mainFont;
 		font-size: 18px;
-		color: $text-color;
+		color: $dark-color;
 		border: none;
 		border-radius: 20px;
 		background-color: #f5f5f5;
 		&--white-bg {
 			background-color: #fff;
 		}
+		@include shift();
 		&:focus {
 			box-shadow: 0px 0px 0px 2px #5D71DD;
+		}
+		&::placeholder {
+			color: $text-color;
 		}
 	}
 	&-btn {
@@ -52,8 +56,17 @@
 		font-family: $mainFont;
 		font-size: 18px;
 		line-height: 23px;
+		color: $dark-color;
 		background-color: #f5f5f5;
 		border: none;
 		border-radius: 20px;
+		outline: none;
+		@include shift();
+		&:focus {
+			box-shadow: 0px 0px 0px 2px #5D71DD;
+		}
+		&::placeholder {
+			color: $text-color;
+		}
 	}
 }

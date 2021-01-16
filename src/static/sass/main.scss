@@ -62,12 +62,22 @@ section {
 
 input,
 select,
-button {
+button,
+a {
 	outline: none;
+}
+input:focus,
+select:focus,
+button:focus,
+a:focus {
+	box-shadow: 0px 0px 0px 2px #5D71DD;
 }
 
 *, *:before, *:after {
 	box-sizing: border-box;
+}
+.main {
+	flex: 1 0 auto;
 }
 
 .visually-hidden {

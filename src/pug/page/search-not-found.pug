@@ -1,0 +1,13 @@
+extends ../main-layout
+
+block variables
+	- var title = 'Страница результатов'
+	- var pageClass = 'search-not-found-page'
+
+block content
+	include ../modules/header/header
+	main.main
+		section.s-search
+			.container.search__container
+				h1.blog__title.search__title Результаты поиска
+				span.search-not-found__text Ничего не найдено
