@@ -1,67 +1,92 @@
 .header {
-	position: relative;
-	padding: 8px 0 6px 0;
-	background-color: #fff;
-	&__container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	&__logo {
-		transform: translateY(3px);
-	}
-	&-right {
-		display: flex;
-		& > * {
-		&:not(:last-child) { margin-right: $grid-gap; }
-		}
-	}
-	&-search {
-		position: absolute;
-		top: calc(100% + 80px);
-		left: 50%;
-		display: none;
-		padding: 25px 40px;
-		width: 1040px;
-		border-radius: 20px;
-		background-color: #fff;
-		z-index: 10;
-		transform: translateX(-50%);
-		&__form {
-			display: flex;
-			align-items: center;
-			& > * {
-			&:not(:last-child) { margin-right: 20px; }
-			}
-		}
-		&__btn {
-			max-width: 200px;
-		}
-	}
-	&__close {
-		display: none;
-		& > * {
-		&:not(:last-child) { margin-right: 8px; }
-		}
-		cursor: pointer;
-		&:hover {
-			& span {
-				color: $aсcent-color;
-			}
-			& svg {
-				fill: $aсcent-color;
-			}
-		}
-		& span {
-			font-size: 18px;
-			line-height: 23px;
-			color: $dark-color;
-			@include shift();
-		}
-		& svg {
-			@include size(10px);
-			fill: $dark-color;
-			@include shift();
-		}
-	}
+  position: relative;
+  padding: 8px 0 6px 0;
+  background-color: #fff;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    transform: translateY(3px);
+  }
+  &-right {
+    display: flex;
+    & > * {
+      &:not(:last-child) {
+        margin-right: $grid-gap;
+      }
+    }
+  }
+  &-search {
+    position: absolute;
+    top: calc(100% + 80px);
+    left: 50%;
+    display: none;
+    padding: 25px 40px;
+    width: 1040px;
+    border-radius: 20px;
+    background-color: #fff;
+    z-index: 10;
+    transform: translateX(-50%);
+    @include mw1024() {
+      max-width: 80%;
+    }
+    &__form {
+      display: flex;
+      align-items: center;
+      & > * {
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+      @include mw1024() {
+        flex-direction: column;
+        & > * {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    &__btn {
+      max-width: 200px;
+      @include phones() {
+        max-width: 100%;
+      }
+    }
+  }
+  &__close {
+    display: none;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+    cursor: pointer;
+    &:hover {
+      & span {
+        color: $aсcent-color;
+      }
+      & svg {
+        fill: $aсcent-color;
+      }
+    }
+    & span {
+      font-size: 18px;
+      line-height: 23px;
+      color: $dark-color;
+      @include shift();
+    }
+    & svg {
+      @include size(10px);
+      fill: $dark-color;
+      @include shift();
+    }
+  }
+  &__nav {
+    @include mw767() {
+      display: none;
+    }
+  }
 }

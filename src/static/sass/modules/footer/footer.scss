@@ -1,25 +1,37 @@
 .footer {
-	flex: 0 0 auto;
-	padding: 40px 0px;
-	background-color: $accent-bg;
-	&__container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	&__logo {
-		margin-bottom: 34px;
-	}
-	&__copy {
-		font-size: 14px;
-		line-height: 18px;
-	}
+  flex: 0 0 auto;
+  padding: 40px 0px;
+  background-color: $accent-bg;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__logo {
+    margin-bottom: 34px;
+  }
+  &__copy {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 .footer__nav {
-	margin-bottom: 65px;
-	& .nav__list {
-		& > * {
-			&:not(:last-child) { margin-right: 80px; }
-		}
-	}
+  margin-bottom: 65px;
+  & .nav__list {
+    & > * {
+      &:not(:last-child) {
+        margin-right: 80px;
+      }
+    }
+    @include mw767() {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      & > * {
+        &:not(:last-child) {
+          margin: 0 0 20px 0;
+        }
+      }
+    }
+  }
 }

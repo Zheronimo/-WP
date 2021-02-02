@@ -1,38 +1,89 @@
 .popular-posts {
-	margin-bottom: 33px;
-	&__list {
-		& > * {
-			&:not(:last-child) { 
-				border-bottom: 1px solid $text-color; 
-				margin-bottom: 2px; 
-			}
-		}
-	}
+  margin-bottom: 33px;
+  &__title {
+    @include mw767() {
+      text-align: center;
+    }
+  }
+  &__list {
+    & > * {
+      &:not(:last-child) {
+        border-bottom: 1px solid $text-color;
+        margin-bottom: 2px;
+      }
+    }
+    @include mw1024() {
+      display: flex;
+      justify-content: space-between;
+      & > * {
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+      }
+    }
+    @include mw767() {
+      flex-direction: column;
+      & > * {
+        &:not(:last-child) {
+          border-bottom: 1px solid $text-color;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+  &__item {
+    @include mw1024() {
+      flex-grow: 1;
+      max-width: 30%;
+    }
+    @include mw767() {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  @include mw1024() {
+    margin-bottom: 60px;
+  }
 }
 .popular-post {
-	&__article {
-		padding: 10px 0;
-		border-radius: 0px;
-		background-color: transparent;
-		&:hover {
-			box-shadow: none;
-			& .blog-post__title {
-				color: $aсcent-color;
-			}
-		}
-		& .blog-post__title {
-			margin-bottom: 10px;
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 23px;
-			color: $dark-color;
-		}
-		& .blog-post__date {
-			position: initial;
-			font-size: 18px;
-		}
-	}
+  &__article {
+    padding: 10px 0;
+    border-radius: 0px;
+    background-color: transparent;
+    &:hover {
+      box-shadow: none;
+      & .blog-post__title {
+        color: $aсcent-color;
+      }
+    }
+    @include mw1024() {
+      display: flex;
+      flex-direction: column;
+      & > * {
+        &:not(:last-child) {
+          flex-grow: 1;
+        }
+      }
+    }
+    & .blog-post__title {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 23px;
+      color: $dark-color;
+      @include mw1024() {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+    & .blog-post__date {
+      position: initial;
+      font-size: 18px;
+    }
+  }
 }
 .post__subscribe {
-	background-color: $accent-bg;
+  background-color: $accent-bg;
 }

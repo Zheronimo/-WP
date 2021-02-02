@@ -3,6 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include mw767() {
+    flex-direction: column-reverse;
+    & > * {
+      &:not(:first-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
   &__item {
     padding: 10px 16px;
     background: rgba(93, 113, 221, 0.05);

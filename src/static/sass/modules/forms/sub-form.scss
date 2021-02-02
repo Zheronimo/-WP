@@ -1,7 +1,33 @@
 .sub-form {
-	padding-left: 30px;
-	padding-right: 30px;
-	& > * {
-	&:not(:last-child) { margin-bottom: 20px; }
-	}
+  padding-left: 30px;
+  padding-right: 30px;
+  & > * {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @include desktop() {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include mw1024() {
+    padding: 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > * {
+      &:not(:last-child) {
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+  @include mw767() {
+    padding: 0 10%;
+    flex-direction: column;
+    & > * {
+      &:not(:last-child) {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
 }

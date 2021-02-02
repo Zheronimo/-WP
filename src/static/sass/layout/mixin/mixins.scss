@@ -1,94 +1,105 @@
-@mixin vcenter($axis: 'both'){
-	position: absolute;
-	@if ($axis == 'both'){
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		}
-	@if ($axis == 'x'){
-		left: 50%;
-		transform: translateX(-50%);
-		}
-	@if ($axis == 'y'){ 
-		top: 50%;
-		transform: translateY(-50%);
-		}
+@mixin vcenter($axis: "both") {
+  position: absolute;
+  @if ($axis == "both") {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @if ($axis == "x") {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if ($axis == "y") {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
-@mixin coverdiv{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	}
-@mixin cover($path){
-	background-image: url($path);
-	background-repeat: no-repeat; 
-	background-size: cover;
-	background-position: center;
-	}
-@mixin box{
-	box-sizing: border-box;
+@mixin coverdiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-@mixin gw($color1, $color2){
-	background-image:(linear-gradient($color1, $color2));
+@mixin cover($path) {
+  background-image: url($path);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-@mixin gh($color1, $color2){
-	background-image:(linear-gradient(left, $color1, $color2));
+@mixin box {
+  box-sizing: border-box;
 }
-	
-@mixin rem($size){
-	font-size: ($size/18)*1rem;
+@mixin gw($color1, $color2) {
+  background-image: (linear-gradient($color1, $color2));
+}
+@mixin gh($color1, $color2) {
+  background-image: (linear-gradient(left, $color1, $color2));
 }
 
-@mixin size($width, $height...){
-	@if (length($height) == 1){ 
-    	height: $height;
-    	width: $width;
-  }
-	@else { 
-    	height: $width;
-    	width: $width;
-	}
+@mixin rem($size) {
+  font-size: ($size/18) * 1rem;
 }
-@mixin lh($siaze1,$size2){
-	line-height: ($siaze1/$size2)*1em;
+
+@mixin size($width, $height...) {
+  @if (length($height) == 1) {
+    height: $height;
+    width: $width;
+  } @else {
+    height: $width;
+    width: $width;
+  }
+}
+@mixin lh($siaze1, $size2) {
+  line-height: ($siaze1/$size2) * 1em;
 }
 
 @mixin visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0 !important;
-	border: 0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
-@mixin shift($property: all, $duration: .3s, $ease: linear) {
-	transition: $property $duration $ease;
+@mixin shift($property: all, $duration: 0.3s, $ease: linear) {
+  transition: $property $duration $ease;
 }
 
-@mixin desktop(){
-	@media screen and (max-width: 1200px){
-		@content;
-	}
+@mixin desktop() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
 }
 
-@mixin laptops(){
-	@media screen and (max-width: 992px){
-		@content;
-	}
+@mixin mw1024() {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
 }
 
-@mixin tablets(){
-	@media screen and (max-width: 768px){
-		@content;
-	}
+@mixin laptops() {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
 }
-@mixin phones(){
-	@media screen and (max-width: 480px){
-		@content;
-	}
+
+@mixin mw767() {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablets() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin phones() {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
 }

@@ -1,63 +1,71 @@
 .blog {
-	&__title {
-		margin-bottom: 20px;
-		font-weight: 500;
-		font-size: 24px;
-		line-height: 31px;
-		color: $dark-color;
-	}
-	&-post {
-		position: relative;
-		padding: $grid-gap;
-		width: 100%;
-		height: 100%;
-		border-radius: 20px;
-		background-color: #fff;
-		cursor: pointer;
-		@include shift();
-		&:hover {
-			box-shadow: 4px 8px 40px rgba(8, 24, 111, 0.2);
-		}
-		&:focus {
-			box-shadow: 0px 0px 0px 2px #5D71DD;
-		}
-		&--main {
-			margin-bottom: $grid-gap;
-			height: 280px;
-		}
-		&__category {
-			position: relative;
-			margin-bottom: 30px;
-			display: inline-block;
-			padding: 8px 16px;
-			font-size: 16px;
-			line-height: 21px;
-			color: $aсcent-color;
-			border-radius: 8px;
-			background-color: #F7F8FD;
-			z-index: 5;
-			@include shift();
-			&:hover {
-				background: rgba(93, 113, 221, 0.15);
-			}
-		}
-		&__link::before {
-			content: '';
-			@include coverdiv();
-			&:hover {
-				box-shadow: 4px 8px 40px rgba(8, 24, 111, 0.2);
-			}
-		}
-		&__descr {
-			max-width: 880px;
-			line-height: 23px;
-		}
-		&__date {
-			position: absolute;
-			top: 42px;
-			right: 40px;
-			font-size: 16px;
-		}
-
-	}
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: $dark-color;
+  }
+  &-post {
+    position: relative;
+    padding: $grid-gap;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    @include shift();
+    &:hover {
+      box-shadow: 4px 8px 40px rgba(8, 24, 111, 0.2);
+    }
+    &:focus {
+      box-shadow: 0px 0px 0px 2px #5d71dd;
+    }
+    &--main {
+      margin-bottom: $grid-gap;
+      height: 280px;
+      @include mw767() {
+        height: auto;
+      }
+    }
+    &__category {
+      position: relative;
+      margin-bottom: 30px;
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 16px;
+      line-height: 21px;
+      color: $aсcent-color;
+      border-radius: 8px;
+      background-color: #f7f8fd;
+      z-index: 5;
+      @include shift();
+      &:hover {
+        background: rgba(93, 113, 221, 0.15);
+      }
+      @include desktop() {
+        font-size: 14px;
+      }
+    }
+    &__link::before {
+      content: "";
+      @include coverdiv();
+      &:hover {
+        box-shadow: 4px 8px 40px rgba(8, 24, 111, 0.2);
+      }
+    }
+    &__descr {
+      max-width: 880px;
+      line-height: 23px;
+    }
+    &__date {
+      position: absolute;
+      top: 42px;
+      right: 40px;
+      font-size: 16px;
+    }
+  }
 }

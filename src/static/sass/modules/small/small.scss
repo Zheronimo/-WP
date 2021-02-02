@@ -12,9 +12,9 @@
   background-position: left center;
 }
 .address {
-	padding-left: 24px;
-	font-weight: 400;
-	font-style: normal;
+  padding-left: 24px;
+  font-weight: 400;
+  font-style: normal;
   color: $aсcent-color;
   background-image: url("../img/svg/marker.svg");
   background-repeat: no-repeat;
@@ -24,19 +24,19 @@
   height: 300px;
   background-repeat: no-repeat;
   background-position: center;
-	background-size: cover;
-	&-category {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+  background-size: cover;
+  &-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .banner-category__title {
-	padding: 71px 0;
-	font-weight: 500;
-	font-size: 30px;
-	line-height: 38px;
-	color: $aсcent-color;
+  padding: 71px 0;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 38px;
+  color: $aсcent-color;
 }
 .banner-post {
   padding: $grid-gap 0;
@@ -60,6 +60,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: $grid-gap;
+    @include mw1024() {
+      display: block;
+      & > * {
+        &:not(:last-child) {
+          margin-bottom: 95px;
+        }
+      }
+    }
   }
 }
 .subscribe {
@@ -72,28 +80,30 @@
   margin-bottom: 30px;
 }
 .social {
-	display: flex;
-	& > * {
-	&:not(:last-child) { margin-right: 20px; }
-	}
-	&__link {
-		display: block;
-		@include size(40px);
-		border-radius: 50%;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		&--fb {
-			background-image: url('../img/svg/fb.svg');
-		}
-		&--vk {
-			background-image: url('../img/svg/vk.svg');
-		}
-		&--insta {
-			background-image: url('../img/svg/insta.svg');
-		}
-		&--tw {
-			background-image: url('../img/svg/tw.svg');
-		}
-	}
+  display: flex;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__link {
+    display: block;
+    @include size(40px);
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &--fb {
+      background-image: url("../img/svg/fb.svg");
+    }
+    &--vk {
+      background-image: url("../img/svg/vk.svg");
+    }
+    &--insta {
+      background-image: url("../img/svg/insta.svg");
+    }
+    &--tw {
+      background-image: url("../img/svg/tw.svg");
+    }
+  }
 }

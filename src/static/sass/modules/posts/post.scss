@@ -6,10 +6,16 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: $grid-gap;
+    @include mw767() {
+      display: block;
+    }
   }
 }
 .post-wrapper {
   grid-column: 3 span;
+  @include mw767() {
+    margin-bottom: 60px;
+  }
 }
 .post {
   max-width: 800px;
